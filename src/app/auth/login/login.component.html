@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div class="login">
+        <div class="login-triangle"></div>
+        
+        <h2 class="login-header">Log in</h2>
+      
+        <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin()">
+            <p>
+                <input type="number" placeholder="Número de Identificación" name="Numero" #Numero [(ngModel)]="iUsuario.Numero" required>
+            </p>
+            <p>
+                <input type="password" placeholder="Password" name="Contrasena" #Contrasena [(ngModel)]="iUsuario.Contrasena" required>
+            </p>
+            <p>
+                <input type="submit" value="Entrar" [disabled]="!frmLogin.valid">
+            </p>
+        </form>
+      </div>
+</div>
